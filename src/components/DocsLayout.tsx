@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
-import { Menu, Github, Terminal } from "lucide-react";
+import { Menu, Github, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ThemeToggle from "./ThemeToggle";
 import DocSidebar from "./DocSidebar";
@@ -43,8 +43,13 @@ const DocsLayout: React.FC = () => {
           </div>
           <div className="flex items-center gap-1">
             <ThemeToggle />
+            <a href="https://www.npmjs.com/package/venvy" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="h-7 w-7" title="npm">
+                <Package className="h-3.5 w-3.5" />
+              </Button>
+            </a>
             <a href="https://github.com/ElnatanSamuel/venvy" target="_blank" rel="noopener noreferrer">
-              <Button variant="ghost" size="icon" className="h-7 w-7">
+              <Button variant="ghost" size="icon" className="h-7 w-7" title="GitHub">
                 <Github className="h-3.5 w-3.5" />
               </Button>
             </a>
